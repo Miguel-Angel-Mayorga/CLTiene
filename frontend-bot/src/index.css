@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mi CSS propio */
+.btn-dexter {
+  background: linear-gradient(90deg, #6e45e2, #88d3ce);
+  padding: 12px 24px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.btn-dexter:hover {
+  transform: scale(1.05);
+}
+
+/* CSS adicional generado por Vite, lo puedes dejar si quieres */
+
