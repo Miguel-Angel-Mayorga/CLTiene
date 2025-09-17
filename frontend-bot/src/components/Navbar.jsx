@@ -1,22 +1,45 @@
-import React from 'react';
+import person from '../assets/Asset 2@4x.png';
+import menu from '../assets/burger.png';
+import logo from '../assets/CLTiene-logo.png';
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 w-full bg-[#1A1A2E] text-white flex items-center px-6 py-4 shadow-md z-10">
-      <div className="flex items-center space-x-4"> {/* Aumentado el espacio entre logo y texto */}
-        {/* Aquí la imagen */}
-        <img src="/logo.png" alt="Logo" className="h-10 w-10 object-contain" /> {/* Ajustado a 'object-contain' si es necesario */}
+    <nav className="w-full bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg border-b border-blue-700 fixed top-0 z-50">
+      <div className="w-full mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
         
-        {/* Contenedor del texto */}
-        <div className="flex flex-col"> {/* Asegura que el texto esté en columna si quieres dos líneas */}
-          <h1 className="text-xl font-bold leading-none">CLTIENE</h1> {/* 'leading-none' para reducir espacio entre líneas */}
-          <p className="text-sm">SOLUCIONES</p>
+        {/* IZQUIERDA - Los 3 elementos juntos */}
+        <div className="flex items-center space-x-2 sm:space-x-4">
+          {/* Menú hamburguesa */}
+          <img 
+            src={menu}
+            alt="menu hamburguesa" 
+            className="h-6 w-6 sm:h-8 sm:w-8 object-contain"
+          />
+
+          {/* Logo - Se oculta en móviles pequeños si es necesario */}
+          <img 
+            src={logo} 
+            alt="Logo CLTIENE" 
+            className="h-8 w-32 sm:h-10 sm:w-40 object-contain"
+          />
+
+          {/* Texto - Se oculta en móviles muy pequeños */}
+          <h3 className="hidden sm:block text-sm sm:text-lg font-semibold">
+            Servicio de ayuda
+          </h3>
         </div>
+
+        {/* DERECHA - Icono de persona */}
+        <div className="flex items-center">
+          <img 
+            src={person} 
+            alt="logo de persona" 
+            className="h-6 w-6 sm:h-8 sm:w-8 object-contain"
+          />
+        </div>
+
       </div>
-      
-      {/* Elemento de la derecha (Servicio de ayuda) */}
-      <div className="ml-auto text-sm md:text-base">Servicio de ayuda</div> {/* 'ml-auto' para empujar a la derecha */}
-    </header>
+    </nav>
   );
 };
 

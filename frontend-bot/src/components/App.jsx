@@ -1,7 +1,6 @@
-import React from 'react';
-import Navbar from './Navbar';
-import ChatWindow from './ChatWindow';
 import ChatInput from './ChatInput';
+import ChatWindow from './ChatWindow';
+import Navbar from './Navbar';
 
 const App = () => {
   return (
@@ -14,5 +13,9 @@ const App = () => {
     </div>
   );
 };
+<div className="bg-red-500 text-white p-4">
+  Tailwind YA funciona 🚀
+</div>
+
 
 export default App;
